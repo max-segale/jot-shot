@@ -5,33 +5,32 @@
   height: 100%
   display: flex
   flex-flow: column nowrap
-  justify-content: space-between
+  justify-content: center
   align-items: center
-
-header, footer
-  flex: 1 0 0
 
 .heading
   font-size: 2rem
   font-weight: 900
 
 .view
-  width: 100vw
-  height: 100vw
+  width: 100%
+  max-width: 100vw
+  max-height: 100vh
+  padding: 100% 0 0
+  position: relative
 
   canvas
     width: 100%
     height: 100%
+    position: absolute
+    left: 0
+    top: 0
     background: grey
 
 .menu
   width: 100%
-  position: fixed
-  left: 0
-  top: 50%
-  z-index: 9
   padding: 1rem
-  transform: translateY(-50%)
+  background: black
 
   ul
     display: flex
@@ -40,7 +39,11 @@ header, footer
     align-items: center
     border-radius: 1rem
     background: white
+    overflow: hidden
 
     li
       flex: 1 0 0
-      cursor: pointer
+
+      button
+        width: 100%
+        background: grey

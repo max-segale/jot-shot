@@ -15,6 +15,7 @@ class View extends React.Component {
   render() {
     return (
       <div className='view' onClick={this.handleClick}>
+        <h1 className='heading'>Jot Shot</h1>
         <canvas></canvas>
       </div>
     );
@@ -31,8 +32,12 @@ class Menu extends React.Component {
     return (
       <div className='menu'>
         <ul>
-          <li>Text</li>
-          <li>Photo</li>
+          <li>
+            <button>Text</button>
+          </li>
+          <li>
+            <button>Photo</button>
+          </li>
         </ul>
       </div>
     );
@@ -42,13 +47,8 @@ class Menu extends React.Component {
 function App() {
   return (
     <div className='wrapper'>
-      <header>
-        <h1 className='heading'>Jot Shot</h1>
-      </header>
       <View />
       <Menu />
-      <footer>
-      </footer>
     </div>
   );
 }
